@@ -1,0 +1,100 @@
+.billderLogs{
+
+  #paginator{
+    text-align: right;
+    width:98%;
+    margin:0;
+
+    .amount_results{
+      color: $grey;
+      margin-right:2em;
+    }
+
+    input{
+      width:4em;
+      text-align: right;
+    }
+    button{
+      margin-left: 1em;
+    }
+  }
+
+  #logs_form_table{
+    width:94%;
+    table{
+      th,td{
+        color: $black;
+        padding:.5em;
+
+        &#content{
+          width:40%;
+        }
+
+        &#status{
+          a{
+            display: flex;
+            justify-content: center;
+            
+            span{
+              float: none;
+            }
+          }
+        }
+
+        span{
+          &.tag {
+            background: #efefef;
+            border-radius: 2em;
+            padding: .2em .5em;
+            width: 90%;
+            display: block;
+            text-align: center;
+
+            &.success {
+              background: $success;
+              color: #FFF;
+            }
+
+            &.failure {
+              background: $error;
+              color: #FFF;
+            }
+          }
+        }
+
+
+        a.more{
+          cursor:pointer;
+        }
+        pre.details{
+          opacity:0;
+          visibility: hidden;
+          height:0;
+          margin:0;
+          padding:0;
+          box-sizing: border-box;
+
+          &.active{
+            opacity:1;
+            visibility: visible;
+            height: auto;
+            padding:1em;
+            margin:1em 0;
+            background: #FFF;
+            border:solid 1px #e3e3e3;
+          }
+        }
+      }
+
+      tr.no-items{
+        td{
+          color: #9f9f9f;
+          padding: 1em;
+          text-align: center;
+          text-transform: uppercase;
+        }
+      }
+    }
+
+  }
+}
